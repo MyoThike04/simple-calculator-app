@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator APP</title>
+    <style>
+
+        .calculator{
+            width: 300px;
+            height: 550px;
+            position: absolute;
+            left: 500px;
+            border-radius: 30px;
+            box-shadow: 20px 20px 30px rgb(148, 145, 145);
+            background-color: black;    
+        }
+
+        #display{
+            width: 280px;
+            height: 100px;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: -10px;
+            font-size: 3rem;
+            text-align: right;
+            color:rgb(209, 212, 212);
+            background-color:rgb(63, 62, 62);
+        }
+        
+        .keys{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1px;
+            padding: 25px;
+        }
+
+        button{
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-right: 25px;
+            margin-left: -13px;
+            cursor: pointer;
+            background-color: rgb(177, 171, 171);
+        }
+
+        button:hover{
+             background-color: rgb(228, 219, 219);
+        }
+         
+        .allclear-btn{
+             background-color: rgb(231, 107, 61);
+        }
+
+        .allclear-btn:hover {
+             background-color: rgb(243, 146, 101);
+        }
+    </style>
+</head>
+<body>
+     <div class="calculator">
+        <input id="display">
+          <div class="keys">
+            <button onclick="clearTodisplay('AC')" class="allclear-btn">AC</button>
+            <button onclick="deleteTodisplay('D')">D</button>
+            <button onclick="calculateTodisplay('%')">%</button>
+            <button onclick="calculateTodisplay('/')">/</button>
+            <button onclick="calculateTodisplay('7')">7</button>
+            <button onclick="calculateTodisplay('8')">8</button>
+            <button onclick="calculateTodisplay('9')">9</button>
+            <button onclick="calculateTodisplay('*')">*</button>
+            <button onclick="calculateTodisplay('4')">4</button>
+            <button onclick="calculateTodisplay('5')">5</button>
+            <button onclick="calculateTodisplay('6')">6</button>
+            <button onclick="calculateTodisplay('-')">-</button>
+            <button onclick="calculateTodisplay('1')">1</button>
+            <button onclick="calculateTodisplay('2')">2</button>
+            <button onclick="calculateTodisplay('3')">3</button>
+            <button onclick="calculateTodisplay('+')">+</button>
+            <button onclick="calculateTodisplay('0')">0</button>
+            <button onclick="calculateTodisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+          </div>
+     </div>
+
+     <script src="index.js"></script>
+           
+         
+</body>
+</html>
